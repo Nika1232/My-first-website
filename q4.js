@@ -1,8 +1,8 @@
 const images1 = [
-    'pho1.jpg',
-    'pho2.jpg',
-    'pho3.jpg',
-    'pho4.jpg'
+    'pha1.jpg',
+    'pha2.jpg',
+    'pha3.jpg',
+    'pha4.jpg'
 ];
 
 let currentIndex = 0;
