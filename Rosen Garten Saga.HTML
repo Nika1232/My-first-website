@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosen Garten Saga</title>
+    <link rel="stylesheet" href="CSS2.css">
+</head>
+<body>
+    <script>
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+
+        setInterval(changeBackgroundColor, 3000); // Change background color every 3 seconds (3000 milliseconds)
+    </script>
+
+    <div class="text-container">
+        <h2>
+            Click on any image for information about a specific character or press <a href="index.html" class="title-container">here</a> to return to the main page.
+        </h2>
+    </div>
+
+    <div class="other-images">
+        <a href="lynn.html"><img src="lynn.png" alt="Lynn" class="character-image"></a>
+        <a href="Dietrich.html"><img src="Dietrich von Bern.png" alt="Dietrich von Bern" class="character-image"></a>
+        <a href="Yamato.html"><img src="Yamato takeru.png" alt="Yamato Takeru" class="character-image"></a>
+        <a href="arthur.html"><img src="arthur.png" alt="Arthur" class="character-image"></a>
+        <a href="Gawain.html"><img src="Gawain.png" alt="Duo" class="character-image last-two-images"></a>
+        <a href="dragon.html"><img src="dragon.png" alt="Dragon" class="character-image last-two-images"></a>
+    </div>
+</body>
+</html>

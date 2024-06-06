@@ -1,0 +1,61 @@
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    animation: gradientAnimation 15s ease infinite;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+    background-color: #6177d2; /* Fallback color */
+    transition: background-color 1s ease; /* Transition effect */
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+}
+
+.other-images {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line if necessary */
+    justify-content: center; /* Center the images horizontally */
+    gap: 10px; /* Adjust spacing between images */
+}
+
+.character-image {
+    width: 450px; /* Adjust as needed */
+    height: auto;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.character-image:hover {
+    transform: scale(1.1); /* Increase scale on hover */
+}
+
+.text-container {
+    text-align: center; /* Center align the text */
+    margin-bottom: 20px; /* Adjusted margin to ensure proper spacing */
+    z-index: 1; /* Ensure the text is above the images */
+    padding: 0 10px; /* Add padding to the sides for better readability on small screens */
+}
+
+@media (max-width: 768px) {
+    .character-image {
+        max-width: 90%; /* Reduce max-width for smaller screens */
+    }
+
+    .last-two-images {
+        width: 100%; /* Ensure last two images also resize properly on small screens */
+    }
+}
+
+.last-two-images {
+    width: 840px; /* Adjust width for the last two images */
+    height: auto;
+}
